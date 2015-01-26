@@ -1,0 +1,9 @@
+#!/bin/bash
+
+local_subdomain=`basename $PWD`
+home_url=http://127.0.0.1/"$local_subdomain"
+
+remote_domain=http://domain.com/
+ssh_connection=user@domain.com
+
+[ -d tmp ] || mkdir tmp

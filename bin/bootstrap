@@ -1,0 +1,5 @@
+#!/bin/bash
+
+if ! command -v livereloadx > /dev/null; then
+	npm install -g livereloadx
+fi

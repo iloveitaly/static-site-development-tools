@@ -1,0 +1,16 @@
+#!/bin/bash
+
+cd `dirname $0`
+cd ..
+
+source ./bin/server
+
+rsync -avrp \
+	--exclude bin \
+	--exclude node_modules \
+	--exclude Documentation \
+	--exclude .DS_Store \
+	--exclude "documentation" \
+	--exclude less \
+	--exclude '.git' \
+	-e ssh $PWD/ $ssh_connection:"~/$local_subdomain/"
